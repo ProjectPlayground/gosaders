@@ -7,21 +7,19 @@
 </ion-header>
 
 
-<ion-content padding>
-<ion-list no-lines text-wrap>
-  <ion-item *ngFor="let social of socials | async">
-    <!--<ion-icon name="logo-twitter" item-left></ion-icon><span item-left color="sca-main-color">{{social.name}}</span>
+<ion-content>
+  <ion-list>
+    <aion-item *ngFor="let social of socials | async" detail-push href="{{social.link}}" onclick="window.open(this.href, '_system','location=yes'); return false;">
+<!--<ion-icon name="logo-twitter" item-left></ion-icon><span item-left color="sca-main-color">{{social.name}}</span>
     <a href="{{social.link}}" onclick="window.open(this.href, '_system','location=yes'); return false;">
     <span item-right color="sca-main-color">{{social.social_name}}</span>-->
 
-    <ion-icon name="{{social.site}}" item-left color="sca-main-color"></ion-icon>
-    <h2>{{social.name}}</h2>
-    <a href="{{social.link}}" onclick="window.open(this.href, '_system','location=yes'); return false;">
-      <span item-right color="sca-main-color">{{social.social_name}}</span>
-    </a>
-  </ion-item>
+<ion-icon name="{{social.site}}" item-left color="sca-main-color"></ion-icon>
+<h2>{{social.name}}</h2>
+<h3 item-right color="sca-main-color">{{social.social_name}}</h3>
+</a>
 
-  <!-- <ion-grid>
+<!-- <ion-grid>
     <ion-row *ngFor="let social of socials | async">
       <ion-col width-20><ion-icon name="{{social.site}}" item-left color="sca-main-color"></ion-icon></ion-col>
       <ion-col width-40>{{social.name}}</ion-col>
@@ -31,6 +29,6 @@
     </ion-row>
   </ion-grid> -->
 
- </ion-list>
+</ion-list>
 
 </ion-content>

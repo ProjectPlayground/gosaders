@@ -14,26 +14,20 @@
 
 
 <ion-content padding>
-        <ion-item *ngFor="let kid of spotlight | async" text-wrap>
-          <ion-card>
-            <ion-item>
-              <ion-avatar item-left>
-                <img src="{{kid.pic}}">
-              </ion-avatar>
-              <h2 color="primary">{{kid.name}}</h2>
-              <p>{{kid.detail}}</p>
-            </ion-item>
+  <ion-card *ngFor="let kid of spotlight | async">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="{{kid.pic}}">
+      </ion-avatar>
+      <h2 color="primary">{{kid.name}}</h2>
+      <p>{{kid.detail}}</p>
+    </ion-item>
+    <img src="{{kid.pic}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+<ion-card-content>
+  <p>{{kid.summary}}</p>
+</ion-card-content>
 
-            <img src="{{kid.pic}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
-
-            <ion-card-content>
-              <p>{{kid.summary}}</p>
-            </ion-card-content>
-
-            <ion-row></ion-row>
-
-          </ion-card>
-        </ion-item>
+</ion-card>
 
 
 </ion-content>

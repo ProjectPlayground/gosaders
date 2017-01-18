@@ -1,4 +1,5 @@
-? <ion-header>
+?
+<ion-header>
   <ion-navbar color="sca-main-color">
     <ion-title>
       GoSaders Teams
@@ -7,48 +8,70 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-list>
+    <!--baseball -->
+    <button ion-item block (click)="goToMSBaseball()">
+      <ion-icon color="primary" name="baseball" item-left></ion-icon>MS Baseball</button>
+    <button ion-item block (click)="goToJVBaseball()">
+      <ion-icon color="primary" name="baseball" item-left></ion-icon>JV Baseball</button>
+    <button ion-item block (click)="goToVBaseball()">
+      <ion-icon color="primary" name="baseball" item-left></ion-icon>Varsity Baseball</button>
 
-<!--baseball -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToMSBaseball()">MS Baseball</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToJVBaseball()">JV Baseball</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToVBaseball()">Varsity Baseball</button></ion-row>
+    <!--basketball -->
+    <button ion-item block (click)="goToGMSBasketball()">
+      <ion-icon color="primary" name="basketball" item-left></ion-icon>Girls MS Basketball</button>
+    <button ion-item block (click)="goToGVBasketball()">
+      <ion-icon color="primary" name="basketball" item-left></ion-icon>Girls Varsity Basketball</button>
 
-<!--basketball -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToGMSBasketball()">Girls MS Basketball</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToGVBasketball()">Girls Varsity Basketball</button></ion-row>
+    <button ion-item block (click)="goToBMSBasketball()">
+      <ion-icon color="primary" name="basketball" item-left></ion-icon>Boys MS Basketball</button>
+    <button ion-item block (click)="goToJVBBasketball()">
+      <ion-icon color="primary" name="basketball" item-left></ion-icon>Boys JV Basketball</button>
+    <button ion-item block (click)="goToBVBasketball()">
+      <ion-icon color="primary" name="basketball" item-left></ion-icon>Boys Varsity Basketball</button>
 
-<ion-row><button ion-button block color="sca-main-color" (click)="goToBMSBasketball()">Boys MS Basketball</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToJVBBasketball()">Boys JV Basketball</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToBVBasketball()">Boys Varsity Basketball</button></ion-row>
+    <!-- Cross country -->
+    <button ion-item block (click)="goToCC()">
+      <ion-icon color="primary" name="walk" item-left></ion-icon>Cross Country</button>
 
-<!-- Cross country -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToCC()">Cross Country</button></ion-row>
+    <!-- football -->
+    <button ion-item block (click)="goToMSFootball()">
+      <ion-icon color="primary" name="american-football" item-left></ion-icon>MS Football</button>
+    <button ion-item block (click)="goToVFootball()">
+      <ion-icon color="primary" name="american-football" item-left></ion-icon>Varsity Football</button>
 
-<!-- football -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToMSFootball()">MS Football</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToVFootball()">Varsity Football</button></ion-row>
+    <!-- soccer -->
+    <button ion-item block (click)="goToGMSSoccer()">
+      <ion-icon color="primary" name="football" item-left></ion-icon>Girls MS Soccer</button>
+    <button ion-item block (click)="goToGVSoccer()">
+      <ion-icon color="primary" name="football" item-left></ion-icon>Girls Varsity Soccer</button>
 
-<!-- soccer -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToGMSSoccer()">Girls MS Soccer</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToGVSoccer()">Girls Varsity Soccer</button></ion-row>
+    <button ion-item block (click)="goToBMSSoccer()">
+      <ion-icon color="primary" name="football" item-left></ion-icon>Boys MS Soccer</button>
+    <button ion-item block (click)="goToBVSoccer()">
+      <ion-icon color="primary" name="football" item-left></ion-icon>Boys Varsity Soccer</button>
 
-<ion-row><button ion-button block color="sca-main-color" (click)="goToBMSSoccer()">Boys MS Soccer</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToBVSoccer()">Boys Varsity Soccer</button></ion-row>
+    <!-- softball -->
+    <button ion-item block (click)="goToMSSoftball()">
+      <ion-icon color="primary" name="baseball" item-left></ion-icon>MS Softball</button>
+    <button ion-item block (click)="goToVSoftball()">
+      <ion-icon color="primary" name="baseball" item-left></ion-icon>Varsity Softball</button>
 
-<!-- softball -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToMSSoftball()">MS Softball</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToVSoftball()">Varsity Softball</button></ion-row>
+    <!-- tennis -->
+    <button ion-item block (click)="goToTennis()">
+      <ion-icon color="primary" name="tennisball" item-left></ion-icon>Tennis</button>
 
-<!-- tennis -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToTennis()">Tennis</button></ion-row>
+    <!-- Track -->
+    <button ion-item block (click)="goToTrack()">
+      <ion-icon color="primary" name="walk" item-left></ion-icon>Track</button>
 
-<!-- Track -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToTrack()">Track</button></ion-row>
-
-<!--volleyball -->
-<ion-row><button ion-button block color="sca-main-color" (click)="goToMSVolleyball()">MS Volleyball</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToJVVolleyball()">JV Volleyball</button></ion-row>
-<ion-row><button ion-button block color="sca-main-color" (click)="goToVVolleyball()">Varsity Volleyball</button></ion-row>
-
+    <!--volleyball -->
+    <button ion-item block (click)="goToMSVolleyball()">
+      <ion-icon color="primary" name="checkbox" item-left></ion-icon>MS Volleyball</button>
+    <button ion-item block (click)="goToJVVolleyball()">
+      <ion-icon color="primary" name="checkbox" item-left></ion-icon>JV Volleyball</button>
+    <button ion-item block (click)="goToVVolleyball()">
+      <ion-icon color="primary" name="checkbox" item-left></ion-icon>Varsity Volleyball</button>
+  </ion-list>
 </ion-content>

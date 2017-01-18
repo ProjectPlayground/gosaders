@@ -38,12 +38,12 @@ import { IonicImageLoader } from 'ionic-image-loader';
 import { ConnectivityService } from '../providers/connectivity-service';
 
 export const firebaseConfig = {
-      apiKey: "asdf",
-      authDomain: "asdf",
-      databaseURL: "asdf",
-      storageBucket: "asdf",
-      messagingSenderId: "asdf"
-    };    
+  apiKey: "AIzaSyDJeVvi86vfnP494fCOEShh7UFeLS8wrlo",
+  authDomain: "schoolconnect.firebaseapp.com",
+  databaseURL: "https://schoolconnect.firebaseio.com",
+  storageBucket: "project-1259865461899028652.appspot.com",
+  messagingSenderId: "157433893715"
+};
 
 @NgModule({
   declarations: [
@@ -120,6 +120,6 @@ export const firebaseConfig = {
     MSVolleyballPage,
     VVolleyballPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConnectivityService]
+  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, ConnectivityService]
 })
-export class AppModule {}
+export class AppModule { }

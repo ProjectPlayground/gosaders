@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            Article Details
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content class="home" padding>
+    <div *ngIf="article" class="selection">
+        <ion-card>
+            <ion-item text-wrap>
+                <img src="{{article.photo}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+                    <h1>{{article.title}}</h1>
+                    <p>{{article.date}}</p>
+            </ion-item>
+            
+            <ion-item text-wrap>
+                <ion-icon document item-left></ion-icon>
+                <p class="item-description">{{article.content}}</p>
+            </ion-item>
+
+            <ion-item [hidden]="article.extLink === ''" text-wrap>
+                <a href="{{article.extLink}}" onclick="window.open(this.href, '_system','location=yes'); return false;">
+                <ion-icon name="paper"></ion-icon></a>
+            </ion-item>
+            
+                 <ion-row><button block ion-button (click)="twitterShare2(article.photo,article.extLink)">Tweet this</button></ion-row>
+                 <ion-row><button block ion-button (click)="instagramThis2(article.photo)">Instagram this</button></ion-row>
+            
+        </ion-card>
+    </div>
+
+    <div style="height: 50px"></div>
+
+</ion-content>

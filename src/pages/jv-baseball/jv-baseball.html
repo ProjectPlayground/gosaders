@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>JV Baseball</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list no-lines text-wrap>
+  <ion-item *ngFor="let game of games | async" (click)="itemTapped($event, game)">
+    <ion-icon name="baseball" color="sca-main-color" item-left medium></ion-icon> {{game.date}} - {{game.opponent}}
+  </ion-item>
+ </ion-list>
+
+</ion-content>

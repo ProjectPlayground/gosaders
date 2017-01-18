@@ -1,0 +1,22 @@
+page-home {
+
+.home {
+ 
+    scroll-content {
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    ion-row {
+        flex: 1;
+    }
+ 
+ }
+
+ .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+}

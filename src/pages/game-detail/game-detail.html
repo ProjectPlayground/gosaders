@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Game Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding has-bouncing="true">
+
+<div #map id="map"></div>
+
+<ion-card>
+<ion-item text-wrap no-lines>
+                    <span item-left color="dark">{{game.date}}</span>
+                    <span item-right color="sca-main-color">  vs {{game.opponent}}</span>
+</ion-item>
+</ion-card>
+
+<ion-card>
+    <ion-item text-wrap>
+                <ion-icon name="school" item-left large></ion-icon>
+                <h2>{{game.location}}</h2>
+                <p>{{game.address}}</p>
+                <button ion-button (click)="navigate()">Navigate</button>
+    </ion-item>
+</ion-card>
+
+<ion-card>
+    <ion-item>
+        <span item-left color="sca-main-color" text-uppercase>{{game.home_away}}</span>
+        <span item-right>Game Time:</span><span item-right color="sca-main-color">{{game.time}}</span>
+    </ion-item>
+</ion-card>
+
+<ion-card>
+    <ion-item no-lines text-center>
+        <span color="sca-main-color">Final: SCA: {{game.us}} - Opponent: {{game.them}}</span>
+    </ion-item>
+    <ion-row><button block ion-button (click)="twitterShare(game.date,game.time,game.home_away,game.opponent)">Tweet this</button></ion-row>
+    <ion-row><button block ion-button (click) = "createEvent()">Add to Calendar</button></ion-row>
+</ion-card>
+
+<div style="height: 50px"></div>
+
+</ion-content>

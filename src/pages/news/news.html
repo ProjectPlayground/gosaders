@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>News</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list text-wrap no-lines>
+  <ion-item *ngFor="let article of news | async" (click)="itemTapped($event, article)">
+    <ion-thumbnail item-left><img src="{{article.photo}}"/></ion-thumbnail>
+    <h2>{{article.date}}</h2>
+    <p class="item-description">{{article.title}}</p>
+  </ion-item>
+ </ion-list>
+
+</ion-content>

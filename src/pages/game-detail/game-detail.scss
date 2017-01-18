@@ -1,0 +1,30 @@
+page-game-detail {
+
+    .scroll-content {
+        height: 100%
+      }
+ 
+      #map {
+        width: 100%;
+        height: 50%;
+      }
+       
+      .name {
+          margin: 0;
+      }
+       
+      .handle {
+          margin: 0;
+      }
+       
+      .status {
+          white-space: normal;
+          color: #000;
+          margin-top: 5px;
+      }
+       
+      .item {
+          align-items: baseline;
+      }
+
+}

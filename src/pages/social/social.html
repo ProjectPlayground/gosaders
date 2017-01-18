@@ -9,7 +9,7 @@
 
 <ion-content>
   <ion-list>
-    <aion-item *ngFor="let social of socials | async" detail-push href="{{social.link}}" onclick="window.open(this.href, '_system','location=yes'); return false;">
+    <a ion-item *ngFor="let social of socials | async" detail-push href="{{social.link}}" onclick="window.open(this.href, '_system','location=yes'); return false;">
 <!--<ion-icon name="logo-twitter" item-left></ion-icon><span item-left color="sca-main-color">{{social.name}}</span>
     <a href="{{social.link}}" onclick="window.open(this.href, '_system','location=yes'); return false;">
     <span item-right color="sca-main-color">{{social.social_name}}</span>-->
